@@ -7,7 +7,7 @@ angular.module('app.cliente',['ngNewRouter'])
 
     $scope.clientes = {};//Lista de clientes que estão vinculados a tela
     $scope.cliente = {};//Objeto de cliente vinculado a tela
-    $scope.estado={};
+    $scope.estado={};  
     $scope.idEstadoSelecionado = 0;
     $scope.estados = [];
 
