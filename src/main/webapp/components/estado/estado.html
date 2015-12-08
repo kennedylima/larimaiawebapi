@@ -1,0 +1,41 @@
+<section ng-controller="EstadoController">
+
+
+    <md-input-container>
+        <label>Nome:</label>
+        <input ng-model="estado.nome" type="text"/>
+    </md-input-container>
+
+    <md-input-container>
+        <label>UF:</label>
+        <input ng-model="estado.uf" type="text"/>
+    </md-input-container>
+
+    <md-button class="md-raised md-warn" id="salvar" ng-click="salvar()">Salvar</md-button>
+
+
+
+    <md-data-table-container>
+        <table md-data-table>
+            <thead>
+            <tr>
+                <th> ID </th>
+                <th> Nome </th>
+                <th> UF </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat=" e in estados">
+                <td>{{e.id}}</td>
+                <td>{{e.nome}}</td>
+                <td>{{e.uf}}</td>
+                <td><button ng-click="editar(e)">Editar</button></td>
+                <td><button ng-click="excluir(e.id)">Excluir</button></td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </md-data-table-container>
+
+</section>

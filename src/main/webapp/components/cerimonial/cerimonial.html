@@ -1,0 +1,35 @@
+<section ng-controller="CerimonialController">
+
+
+    <md-input-container>
+        <label>Descricao:</label>
+        <input ng-model="cerimonial.descricao" type="text"/>
+    </md-input-container>
+
+
+    <md-button class="md-raised md-warn" id="salvar" ng-click="salvar()">Salvar</md-button>
+
+
+
+    <md-data-table-container>
+        <table md-data-table>
+            <thead>
+            <tr>
+                <th> ID </th>
+                <th> Descrição </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" c in cerimoniais">
+                    <td>{{c.id}}</td>
+                    <td>{{c.descricao}}</td>
+                    <td><button ng-click="editar(c)">Editar</button></td>
+                    <td><button ng-click="excluir(c.id)">Excluir</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </md-data-table-container>
+
+</section>
